@@ -1,0 +1,14 @@
+dbVersion: v1
+kind: Pod
+metadata:
+  name: service1-db
+  labels:
+    Application: service1
+    label: db 
+  annotations: {
+    "opencontrail.org/network" : '{"domain":"default-domain", "project": "test-project", "name":"VN1"}'
+  }
+spec:
+  containers:
+  - name: service1-db
+    image: cirros
